@@ -1,0 +1,17 @@
+program PneuSeguroServerHorse;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  UnitPrincipal in 'UnitPrincipal.pas' {Form1},
+  DAO.Connection in 'DAO\DAO.Connection.pas',
+  Controller.Comum in 'Controller\Controller.Comum.pas',
+  Controller.Empresa in 'Controller\Controller.Empresa.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

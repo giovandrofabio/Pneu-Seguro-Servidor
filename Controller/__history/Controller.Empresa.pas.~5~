@@ -1,0 +1,34 @@
+unit Controller.Empresa;
+
+interface
+
+uses Horse,
+     System.JSON,
+     System.SysUtils,
+     Controller.Comum;
+
+procedure RegistrarRotas;
+procedure ListarEmpresas(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure ListarEmpresasId(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure CadastrarCarro(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+implementation
+
+procedure RegistrarRotas;
+begin
+   THorse.Get('/empresas', ListarEmpresas);
+   THorse.Get('/empresas/:id_empresa', ListarEmpresaId);
+   THorse.Post('/empresas', CadastrarEmpresa);
+end;
+
+procedure ListarEmpresas(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+begin
+   //
+end;
+
+procedure ListarEmpresasId(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+begin
+   //
+end;
+
+end.

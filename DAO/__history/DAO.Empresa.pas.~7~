@@ -1,0 +1,66 @@
+unit DAO.Empresa;
+
+interface
+
+uses FireDAC.Comp.Client,
+     FireDAC.DApt,
+     Data.DB,
+     System.JSON,
+     System.SysUtils,
+     System.StrUtils,
+     DataSet.Serialize,
+     DAO.Connection;
+
+type
+   TEmpresa = class
+   private
+      FConn: TFDConnection;
+      FID_EMPRESA: integer;
+      FNOME_EMPRESA: string;
+      procedure Validate(operacao: string);
+   public
+      constructor Create;
+      destructor Destroy; override;
+
+      property ID_EMPRESA: integer Read FID_EMPRESA write FID_EMPRESA;
+      property NOME_EMPRESA: string read FNOME_EMPRESA write FNOME_EMPRESA;
+
+      function Listar(busca: string) : TJSONArray;
+      procedure Adicionar;
+   end;
+
+
+implementation
+
+
+{ TEmpresa }
+
+procedure TEmpresa.Adicionar;
+begin
+
+end;
+
+constructor TEmpresa.Create;
+begin
+   FConn := TConnection.CreateConnection;
+end;
+
+destructor TEmpresa.Destroy;
+begin
+  if Assigned(FConn) then
+     FConn.Free;
+
+  inherited;
+end;
+
+function TEmpresa.Listar(busca: string): TJSONArray;
+begin
+//
+end;
+
+procedure TEmpresa.Validate(operacao: string);
+begin
+///
+end;
+
+end.

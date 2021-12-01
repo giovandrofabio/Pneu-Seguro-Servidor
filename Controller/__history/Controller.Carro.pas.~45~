@@ -1,0 +1,94 @@
+unit Controller.Carro;
+
+interface
+
+uses Horse,
+     System.JSON,
+     System.SysUtils,
+     Controller.Comum,
+     DAO.Carro;
+
+procedure RegistrarRotas;
+procedure ListarCarros(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure ListarCarrosId(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure CadastrarCarro(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+implementation
+
+procedure RegistrarRotas;
+begin
+   THorse.Get('/carros', ListarCarros);
+   THorse.Get('/carros/:id_carro', ListarCarrosId);
+   THorse.Post('/carros', CadastrarCarro);
+end;
+
+procedure ListarCarros(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+var
+   car: TCarro;
+   busca: string;
+begin
+   try
+      try
+         car := TCarro.Create;
+
+         try
+            busca := Req.Query.Items['busca'];
+         except
+            busca := '';
+         end;
+
+         Res.Send<TJSONArray>(car.Listar(busca));
+      except on ex:Exception do
+         Res.Send<TJSONArray>(TJSONArray.Create).status(500);
+      end;
+
+   finally
+      car.Free;
+   end;
+end;
+
+procedure ListarCarrosId(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+var
+   car: TCarro;
+   JsonArray: TJSONArray;
+begin
+   try
+      try
+         car := TCarro.Create;
+
+         try
+            car.ID_CARRO := Req.Params.Items['id_carro'].ToInteger;
+         except
+            car.ID_CARRO := 99999;
+         end;
+
+         JsonArray := car.Listar('');
+
+         if JsonArray.Size > 0 then
+            Res.Send<TJSONArray>(JsonArray)
+         else
+            Res.Send<TJSONArray>(JsonArray).Status(THTTPStatus.NotFound);
+
+      except on ex:Exception do
+         Res.Send<TJSONArray>(TJSONArray.Create).status(THTTPStatus.InternalServerError);
+      end;
+
+   finally
+      car.Free;
+   end;
+end;
+
+procedure CadastrarCarro(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+var
+   car: TCarro;
+   body: TJSONValue;
+begin
+   try
+      car := TCarro.Create;
+      body := Req.Body<TJSONObject>;
+   finally
+      car.Free
+   end;
+end;
+
+end.

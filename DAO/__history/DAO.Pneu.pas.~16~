@@ -1,0 +1,96 @@
+unit DAO.Pneu;
+
+interface
+
+uses FireDAC.Comp.Client,
+     FireDAC.DApt,
+     Data.DB,
+     System.JSON,
+     System.SysUtils,
+     System.StrUtils,
+     DataSet.Serialize,
+     DAO.Connection,
+     DAO.Empresa,
+     DAO.Veiculo;
+
+type
+   TPneu = class
+   private
+      FConn: TFDConnection;
+      FID_PNEU: integer;
+      FEMPRESA: TEmpresa;
+      FVEICULO: TVeiculo;
+      FCAPACIDADE: integer;
+      FSTATUS: integer;
+      procedure Validate(operacao: string);
+      procedure SetEMPRESA(const Value: TEmpresa);
+      procedure SetVEICULO(const Value: TVeiculo);
+   public
+      constructor Create;
+      destructor Destroy; override;
+
+      property ID_PNEU: integer Read FID_PNEU write FID_PNEU;
+      property EMPRESA: TEmpresa read FEMPRESA write SetEMPRESA;
+      property VEICULO: TVeiculo read FVEICULO write SetVEICULO;
+      property CAPACIDADE: integer Read FCAPACIDADE write FCAPACIDADE;
+
+      function Listar(busca: string) : TJSONArray;
+      procedure Adicionar;
+   end;
+
+
+implementation
+
+{ TPneu }
+
+procedure TPneu.Adicionar;
+begin
+
+end;
+
+constructor TPneu.Create;
+begin
+   FConn    := TConnection.CreateConnection;
+   FEMPRESA := TEmpresa.Create;
+   FVEICULO := TVeiculo.Create;
+end;
+
+destructor TPneu.Destroy;
+begin
+  if Assigned(FConn) then
+     FConn.Free;
+
+  if Assigned(FEMPRESA) then
+     FEMPRESA.Free;
+
+  if Assigned(FVEICULO) then
+     FVEICULO.Free;
+
+  inherited;
+end;
+
+function TPneu.Listar(busca: string): TJSONArray;
+begin
+
+end;
+
+procedure TPneu.SetEMPRESA(const Value: TEmpresa);
+begin
+  FEMPRESA := Value;
+end;
+
+procedure TPneu.SetVEICULO(const Value: TVeiculo);
+begin
+  FVEICULO := Value;
+end;
+
+procedure TPneu.Validate(operacao: string);
+begin
+   if (EMPRESA.NOME_EMPRESA.IsEmpty) AND MatchStr(operacao,['Adicionar']) then
+      raise Exception.Create('Nome empresa não informado');
+
+   if (VEICULO.ID_VEICULO > 0) AND MatchStr(operacao,['Adicionar']) then
+      raise Exception.Create('Nome empresa não informado');
+end;
+
+end.

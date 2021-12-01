@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/13 11:48:59.000.844,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/10 11:01:06.000.244,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/25 10:35:49.000.664,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 16:48:01.000.957,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/11 21:05:32.000.490,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/11 21:07:44.000.814,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\UnitPrincipal.fmx=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2021/11/11 21:07:44.000.814,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\UnitPrincipal.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/11 21:08:08.000.901,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\PneuSeguroServerHorse.dproj=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/11/11 21:20:09.000.871,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\DAO\DAO.Connection.pas</Transaction>
+    <Transaction>2021/11/11 21:21:15.000.858,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Controller\Controller.Comum.pas</Transaction>
+    <Transaction>2021/11/11 21:24:38.000.329,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/11 21:25:21.000.513,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Controller\Controller.Empresa.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/11 21:58:44.000.269,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/11 22:00:11.000.573,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\DAO\DAO.Empresa.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/18 22:20:49.000.127,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/18 22:21:25.000.389,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\DAO\DAO.Pneu.pas</Transaction>
+    <Transaction>2021/11/18 22:36:32.000.617,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/18 22:36:51.000.434,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\DAO\DAO.Veiculo.pas</Transaction>
+    <Transaction>2021/11/18 23:31:12.000.969,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/18 23:31:32.000.700,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Controller\Controller.Veiculo.pas</Transaction>
+    <Transaction>2021/11/21 21:40:12.000.630,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/21 21:40:51.000.953,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\DAO\DAO.Usuario.pas</Transaction>
+    <Transaction>2021/11/21 21:49:58.000.222,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/21 21:50:54.000.393,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Controller\Controller.Usuario.pas</Transaction>
+    <Transaction>2021/11/23 10:51:36.000.488,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+    <Transaction>2021/11/23 10:52:41.000.828,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Controller\Controller.Pneu.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Pneu Seguro Servidor\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="Celular" Android64="Celular"/>
+	</ActiveMobileDevice>
+</BorlandProject>

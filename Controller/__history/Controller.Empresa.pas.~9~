@@ -1,0 +1,60 @@
+unit Controller.Empresa;
+
+interface
+
+uses Horse,
+     System.JSON,
+     System.SysUtils,
+     Controller.Comum,
+     DAO.Empresa;
+
+procedure RegistrarRotas;
+procedure ListarEmpresas(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure ListarEmpresaId(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure CadastrarEmpresa(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+implementation
+
+procedure RegistrarRotas;
+begin
+   THorse.Get('/empresas', ListarEmpresas);
+   THorse.Get('/empresas/:id_empresa', ListarEmpresaId);
+   THorse.Post('/empresas', CadastrarEmpresa);
+end;
+
+procedure ListarEmpresas(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+var
+   emp: TEmpresa;
+   busca: string;
+begin
+   try
+      try
+         emp := TEmpresa.Create;
+
+         try
+            busca := Req.Query.Items['busca'];
+         except
+            busca := '';
+         end;
+
+         Res.Send<TJSONArray>(emp.Listar(busca));
+      except on ex:Exception do
+         Res.Send<TJSONArray>(TJSONArray.Create).status(500);
+      end;
+
+   finally
+      emp.Free;
+   end;
+end;
+
+procedure ListarEmpresaId(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+begin
+   //
+end;
+
+procedure CadastrarEmpresa(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+begin
+   //
+end;
+
+end.

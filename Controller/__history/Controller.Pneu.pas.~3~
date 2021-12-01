@@ -1,0 +1,19 @@
+unit Controller.Pneu;
+
+interface
+
+uses Horse,
+     System.JSON,
+     System.SysUtils,
+     Controller.Comum,
+     DAO.Pneu;
+
+procedure RegistrarRotas;
+procedure ListarPneus(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure ListarPneuId(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+procedure CadastrarPneu(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+
+implementation
+
+end.
